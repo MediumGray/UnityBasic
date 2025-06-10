@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    int count;
+    
+    int count; // »Ì±â È½¼ö Ä«¿îÆ®
 
     private void Awake()
     {

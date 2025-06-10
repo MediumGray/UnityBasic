@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GaChaScript : MonoBehaviour
 {
-
- int count; // 뽑기 횟수 카운트
+public Image[] resultImages;
+public TextMeshProUGUI[] resultTexts;
+int count; // 뽑기 횟수 카운트
  public int selectNumber;
+
     private void Awake()
         {
         count = 0;
@@ -44,6 +47,8 @@ public class GaChaScript : MonoBehaviour
         Grade[0] = SSRCharacterList;
         Grade[1] = SRCharacterList;
         Grade[2] = RCharacterList;
+
+
     }
     public void GachaSwitch() // 픽업 시스템 선택
     {
@@ -66,7 +71,7 @@ public void Gacha1() // 뽑기 시스템 1(단차)
     {
         int randomValue = Random.Range(1, 101); //1이상  100이하의 랜덤한 값을 받아 오겠다.(1 ~ 100)
         Debug.Log($"랜덤한 값은 : {randomValue} 입니다.");
-
+        
         if (11 <= count)
         {
            int ssrIndex = Random.Range(0, SSRCharacterList.Count);
